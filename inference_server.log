@@ -14,44 +14,44 @@ This container image and its contents are governed by the NVIDIA Deep Learning C
 By pulling and using the container, you accept the terms and conditions of this license:
 https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
 
-I1203 23:50:50.931692 1 pinned_memory_manager.cc:277] "Pinned memory pool is created at '0x204200000' with size 268435456"
-I1203 23:50:50.931743 1 cuda_memory_manager.cc:107] "CUDA memory pool is created on device 0 with size 67108864"
-I1203 23:50:50.933421 1 model_lifecycle.cc:473] "loading: yolo:1"
-I1203 23:50:50.941850 1 tensorrt.cc:65] "TRITONBACKEND_Initialize: tensorrt"
-I1203 23:50:50.941876 1 tensorrt.cc:75] "Triton TRITONBACKEND API version: 1.19"
-I1203 23:50:50.941879 1 tensorrt.cc:81] "'tensorrt' TRITONBACKEND API version: 1.19"
-I1203 23:50:50.941882 1 tensorrt.cc:105] "backend configuration:\n{\"cmdline\":{\"auto-complete-config\":\"true\",\"backend-directory\":\"/opt/tritonserver/backends\",\"min-compute-capability\":\"6.000000\",\"default-max-batch-size\":\"4\"}}"
-I1203 23:50:50.941972 1 tensorrt.cc:231] "TRITONBACKEND_ModelInitialize: yolo (version 1)"
-I1203 23:50:50.949743 1 logging.cc:46] "Loaded engine size: 16 MiB"
-W1203 23:50:50.974049 1 model_state.cc:521] "The specified dimensions in model config for yolo hints that batching is unavailable"
-I1203 23:50:50.976737 1 tensorrt.cc:297] "TRITONBACKEND_ModelInstanceInitialize: yolo_0 (GPU device 0)"
-I1203 23:50:50.981161 1 logging.cc:46] "Loaded engine size: 16 MiB"
-I1203 23:50:50.998639 1 logging.cc:46] "[MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +21, now: CPU 0, GPU 33 (MiB)"
-I1203 23:50:50.999682 1 instance_state.cc:186] "Created instance yolo_0 on GPU 0 with stream priority 0 and optimization profile default[0];"
-I1203 23:50:50.999910 1 model_lifecycle.cc:849] "successfully loaded 'yolo'"
-I1203 23:50:51.000019 1 server.cc:604] 
+I1204 22:52:52.024258 1 pinned_memory_manager.cc:277] "Pinned memory pool is created at '0x204200000' with size 268435456"
+I1204 22:52:52.024309 1 cuda_memory_manager.cc:107] "CUDA memory pool is created on device 0 with size 67108864"
+I1204 22:52:52.026865 1 model_lifecycle.cc:473] "loading: yolo:1"
+I1204 22:52:52.044270 1 tensorrt.cc:65] "TRITONBACKEND_Initialize: tensorrt"
+I1204 22:52:52.044293 1 tensorrt.cc:75] "Triton TRITONBACKEND API version: 1.19"
+I1204 22:52:52.044295 1 tensorrt.cc:81] "'tensorrt' TRITONBACKEND API version: 1.19"
+I1204 22:52:52.044297 1 tensorrt.cc:105] "backend configuration:\n{\"cmdline\":{\"auto-complete-config\":\"true\",\"backend-directory\":\"/opt/tritonserver/backends\",\"min-compute-capability\":\"6.000000\",\"default-max-batch-size\":\"4\"}}"
+I1204 22:52:52.044388 1 tensorrt.cc:231] "TRITONBACKEND_ModelInitialize: yolo (version 1)"
+I1204 22:52:52.057746 1 logging.cc:46] "Loaded engine size: 16 MiB"
+W1204 22:52:52.083047 1 model_state.cc:521] "The specified dimensions in model config for yolo hints that batching is unavailable"
+I1204 22:52:52.085647 1 tensorrt.cc:297] "TRITONBACKEND_ModelInstanceInitialize: yolo_0 (GPU device 0)"
+I1204 22:52:52.090382 1 logging.cc:46] "Loaded engine size: 16 MiB"
+I1204 22:52:52.106403 1 logging.cc:46] "[MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +21, now: CPU 0, GPU 33 (MiB)"
+I1204 22:52:52.107105 1 instance_state.cc:186] "Created instance yolo_0 on GPU 0 with stream priority 0 and optimization profile default[0];"
+I1204 22:52:52.107285 1 model_lifecycle.cc:849] "successfully loaded 'yolo'"
+I1204 22:52:52.107327 1 server.cc:604] 
 +------------------+------+
 | Repository Agent | Path |
 +------------------+------+
 +------------------+------+
 
-I1203 23:50:51.000041 1 server.cc:631] 
+I1204 22:52:52.107341 1 server.cc:631] 
 +----------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Backend  | Path                                                      | Config                                                                                                                                                        |
 +----------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | tensorrt | /opt/tritonserver/backends/tensorrt/libtriton_tensorrt.so | {"cmdline":{"auto-complete-config":"true","backend-directory":"/opt/tritonserver/backends","min-compute-capability":"6.000000","default-max-batch-size":"4"}} |
 +----------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-I1203 23:50:51.000067 1 server.cc:674] 
+I1204 22:52:52.107361 1 server.cc:674] 
 +-------+---------+--------+
 | Model | Version | Status |
 +-------+---------+--------+
 | yolo  | 1       | READY  |
 +-------+---------+--------+
 
-I1203 23:50:51.019541 1 metrics.cc:890] "Collecting metrics for GPU 0: NVIDIA GeForce RTX 4070"
-I1203 23:50:51.021105 1 metrics.cc:783] "Collecting CPU metrics"
-I1203 23:50:51.021177 1 tritonserver.cc:2598] 
+I1204 22:52:52.128041 1 metrics.cc:890] "Collecting metrics for GPU 0: NVIDIA GeForce RTX 4070"
+I1204 22:52:52.129673 1 metrics.cc:783] "Collecting CPU metrics"
+I1204 22:52:52.129749 1 tritonserver.cc:2598] 
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Option                           | Value                                                                                                                                                                                                           |
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -71,6 +71,6 @@ I1203 23:50:51.021177 1 tritonserver.cc:2598]
 | cache_enabled                    | 0                                                                                                                                                                                                               |
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-I1203 23:50:51.023174 1 grpc_server.cc:2558] "Started GRPCInferenceService at 0.0.0.0:8001"
-I1203 23:50:51.023299 1 http_server.cc:4729] "Started HTTPService at 0.0.0.0:8000"
-I1203 23:50:51.064677 1 http_server.cc:362] "Started Metrics Service at 0.0.0.0:8002"
+I1204 22:52:52.132182 1 grpc_server.cc:2558] "Started GRPCInferenceService at 0.0.0.0:8001"
+I1204 22:52:52.132305 1 http_server.cc:4729] "Started HTTPService at 0.0.0.0:8000"
+I1204 22:52:52.174935 1 http_server.cc:362] "Started Metrics Service at 0.0.0.0:8002"

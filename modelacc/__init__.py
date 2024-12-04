@@ -30,3 +30,5 @@ def get_sample_test_image_path() -> str:
 
 # import everything from preprocess.py
 from .preprocess import *
+from .model_convert import *
+from .postprocess import *
